@@ -9,5 +9,6 @@ let input = [];
 rl.on('line', function (line) {
 	input = line.split(' ');
 }).on('close', function () {
-	console.log(`4 + 5 = ${Number(input[0]) + Number(input[1])}`);
+	total = parseInt(input[0]) + parseInt(input[1]);
+	console.log(`${input[0]} + ${input[1]} = ${total}`);
 });
