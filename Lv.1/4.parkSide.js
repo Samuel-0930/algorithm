@@ -18,7 +18,7 @@ function solution(park, routes) {
 		if (op === 'E') {
 			let available = true;
 			if (robot[1] + n > w - 1) continue;
-			for (let j = 1; j <= n; j++) {
+			for (let j = robot[1]; j <= robot[1] + n; j++) {
 				if (park[robot[0]][j] === 'X') {
 					available = false;
 					break;
@@ -44,7 +44,7 @@ function solution(park, routes) {
 			let available = true;
 			if (h === 1) continue;
 			if (robot[0] + n > h - 1) continue;
-			for (let j = 1; j <= n; j++) {
+			for (let j = robot[0]; j <= robot[0] + n; j++) {
 				if (park[j][robot[1]] === 'X') {
 					available = false;
 					break;
